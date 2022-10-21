@@ -1,3 +1,4 @@
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -34,6 +35,7 @@ public abstract class BaseTest {
         List<Filter> filters = new ArrayList<>();
         filters.add(new RequestLoggingFilter());
         filters.add(new ResponseLoggingFilter());
+        filters.add(new AllureRestAssured());
 
         return new RequestSpecBuilder()
                 .setBaseUri(ConfVariables.getHost())
