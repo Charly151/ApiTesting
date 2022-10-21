@@ -18,7 +18,7 @@ public class RestAssuredClass extends BaseTest{
 
     @Test
     public void LoginRequestTest(){
-        //comentado 1
+        //comentado
                 given()
                 .contentType(ContentType.JSON)
                 .body("{\n" +
